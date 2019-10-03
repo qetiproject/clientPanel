@@ -1,3 +1,4 @@
+import { SettingsComponent } from './components/settings/settings.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientDetailsComponent } from './components/client-details/client-details.component';
@@ -14,7 +15,7 @@ const routes: Routes = [
   { path: 'client/add', component: AddClientComponent },
   { path: 'client/edit/:id', component: EditClientComponent },
   { path: 'client/:id', component: ClientDetailsComponent },
-  { path: 'client/:id', component: ClientDetailsComponent }
+  { path: 'settings', component: SettingsComponent }
 ];
 
 @NgModule({
