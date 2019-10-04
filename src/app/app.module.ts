@@ -1,10 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-
 import { FormsModule} from '@angular/forms';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
@@ -24,6 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
 import { ClientService } from './services/client.service';
+import { SettingsService } from './services/settings.service';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +49,7 @@ import { ClientService } from './services/client.service';
     AngularFireAuthModule,
     FlashMessagesModule.forRoot()
   ],
-  providers: [ClientService, AuthService],
+  providers: [ClientService, AuthService, SettingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
